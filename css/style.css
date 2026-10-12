@@ -1,6 +1,25 @@
 
 /*
-  Name:
-  Course and Section:
-  Instructor Name:
+  Name: Thomas Rotchford
+  Course and Section: CIS233DA 27491 
+  Instructor Name: Brian Thurber
 */ 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Roboto+Mono&display=swap');
+
+:root {
+    --very-light: honeydew;
+    --light: palegreen;
+    --medium: seagreen;
+    --dark: darkgreen;
+    --medium-dark: forestgreen;
+    --code-span: darkolivegreen;
+
+    --main-font: 'Comic Neue', 'Comic Sans MS', cursive;
+    --code-font: 'Roboto Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
