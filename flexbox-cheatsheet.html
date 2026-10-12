@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Flexbox cheatsheet">
     <meta name="keywords" content="CSS, Flexbox, cheatsheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Flexbox Cheatsheet</title>
 </head>
 <body>
@@ -51,6 +52,128 @@
         </dl>
 
         <h2>Properties</h2>
+        <section class="container">
+            <div>
+                <h3>Flex Container Properties</h3>
+
+                <dl>
+                    <div class="property-group">
+                        <dt><code>display</code></dt>
+                        <dd><code>flex;</code> <span>/* creates a block-level flex container */</span></dd>
+                        <dd><code>inline-flex;</code> <span>/* creates a flex container that behaves like an inline element */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>flex-direction</code></dt>
+                        <dd><code>row;</code> <span>/* arranges items horizontally in the normal direction */</span></dd>
+                        <dd><code>row-reverse;</code> <span>/* arranges items horizontally in reverse order */</span></dd>
+                        <dd><code>column;</code> <span>/* stacks items vertically */</span></dd>
+                        <dd><code>column-reverse;</code> <span>/* stacks items vertically in reverse order */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>flex-wrap</code></dt>
+                        <dd><code>nowrap;</code> <span>/* keeps items on one line */</span></dd>
+                        <dd><code>wrap;</code> <span>/* moves items to another line when needed */</span></dd>
+                        <dd><code>wrap-reverse;</code> <span>/* wraps items with the cross-axis direction reversed */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>flex-flow</code></dt>
+                        <dd><code>row nowrap;</code> <span>/* arranges items in a row without wrapping */</span></dd>
+                        <dd><code>row wrap;</code> <span>/* arranges items in a row and allows wrapping */</span></dd>
+                        <dd><code>column nowrap;</code> <span>/* stacks items in one column without wrapping */</span></dd>
+                        <dd><code>column wrap;</code> <span>/* stacks items vertically and allows additional columns */</span></dd>
+                        <dd><code>row-reverse wrap-reverse;</code> <span>/* reverses the row and wrapping directions */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>justify-content</code></dt>
+                        <dd><code>flex-start;</code> <span>/* aligns items to the main start */</span></dd>
+                        <dd><code>flex-end;</code> <span>/* aligns items to the main end */</span></dd>
+                        <dd><code>center;</code> <span>/* centers items along the main axis */</span></dd>
+                        <dd><code>space-between;</code> <span>/* puts equal space between items */</span></dd>
+                        <dd><code>space-around;</code> <span>/* adds equal space around each item */</span></dd>
+                        <dd><code>space-evenly;</code> <span>/* makes all spaces between and around items equal */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>align-items</code></dt>
+                        <dd><code>stretch;</code> <span>/* stretches items across the cross axis when their size allows it */</span></dd>
+                        <dd><code>flex-start;</code> <span>/* aligns items to the cross-axis start */</span></dd>
+                        <dd><code>flex-end;</code> <span>/* aligns items to the cross-axis end */</span></dd>
+                        <dd><code>center;</code> <span>/* centers items along the cross axis */</span></dd>
+                        <dd><code>baseline;</code> <span>/* lines up items using their text baselines */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>align-content</code></dt>
+                        <dd><code>stretch;</code> <span>/* stretches flex lines to fill available space */</span></dd>
+                        <dd><code>flex-start;</code> <span>/* groups flex lines at the cross-axis start */</span></dd>
+                        <dd><code>flex-end;</code> <span>/* groups flex lines at the cross-axis end */</span></dd>
+                        <dd><code>center;</code> <span>/* centers flex lines along the cross axis */</span></dd>
+                        <dd><code>space-between;</code> <span>/* distributes extra space between flex lines */</span></dd>
+                        <dd><code>space-around;</code> <span>/* distributes space around each flex line */</span></dd>
+                        <dd><code>space-evenly;</code> <span>/* distributes equal space between and around flex lines */</span></dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div>
+                <h3>Flex Item Properties</h3>
+
+                <dl>
+                    <div class="property-group">
+                        <dt><code>order</code></dt>
+                        <dd><code>0;</code> <span>/* uses the default ordering position */</span></dd>
+                        <dd><code>1;</code> <span>/* places the item after items with lower order values */</span></dd>
+                        <dd><code>-1;</code> <span>/* places the item before items with higher order values */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>flex-grow</code></dt>
+                        <dd><code>0;</code> <span>/* prevents the item from growing to fill extra space */</span></dd>
+                        <dd><code>1;</code> <span>/* allows the item to grow and share extra space */</span></dd>
+                        <dd><code>2;</code> <span>/* gives the item twice the growth share of an item set to 1 */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>flex-shrink</code></dt>
+                        <dd><code>0;</code> <span>/* prevents the item from shrinking through Flexbox */</span></dd>
+                        <dd><code>1;</code> <span>/* allows the item to shrink when space is limited */</span></dd>
+                        <dd><code>2;</code> <span>/* makes the item shrink more aggressively than an equally sized item set to 1 */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>flex-basis</code></dt>
+                        <dd><code>auto;</code> <span>/* uses the item's main size property or content size as its starting size */</span></dd>
+                        <dd><code>0;</code> <span>/* starts the item at zero size before flex growth is applied */</span></dd>
+                        <dd><code>200px;</code> <span>/* sets the starting main-axis size to 200 pixels */</span></dd>
+                        <dd><code>50%;</code> <span>/* sets the starting size to half the container's definite main size */</span></dd>
+                        <dd><code>content;</code> <span>/* bases the starting size on the item's content */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>flex</code></dt>
+                        <dd><code>none;</code> <span>/* prevents the item from growing or shrinking */</span></dd>
+                        <dd><code>auto;</code> <span>/* lets the item grow or shrink from its automatic starting size */</span></dd>
+                        <dd><code>initial;</code> <span>/* uses the default behavior of not growing but allowing shrinking */</span></dd>
+                        <dd><code>1;</code> <span>/* lets the item grow and shrink with a zero flex basis */</span></dd>
+                        <dd><code>0 1 200px;</code> <span>/* prevents growth, allows shrinking, and starts at 200 pixels */</span></dd>
+                    </div>
+
+                    <div class="property-group">
+                        <dt><code>align-self</code></dt>
+                        <dd><code>auto;</code> <span>/* follows the container's align-items setting */</span></dd>
+                        <dd><code>stretch;</code> <span>/* stretches this item across the cross axis when possible */</span></dd>
+                        <dd><code>flex-start;</code> <span>/* aligns this item to the cross-axis start */</span></dd>
+                        <dd><code>flex-end;</code> <span>/* aligns this item to the cross-axis end */</span></dd>
+                        <dd><code>center;</code> <span>/* centers this item along the cross axis */</span></dd>
+                        <dd><code>baseline;</code> <span>/* aligns this item's text baseline with other items */</span></dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
     </main>
 </body>
 </html>
